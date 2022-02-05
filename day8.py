@@ -29,10 +29,6 @@ for idx, inp in enumerate(inputs) :
     count += ct
 
 print(count)
-
-        
-
-
     
 # a,b,c,d,e,f,g
 # 0,1,2,3,4,5,6
@@ -71,11 +67,9 @@ for idx, inp in enumerate(inputs) :
             tmp = c 
                         
             c = c.replace(segment[0],'')
-            
-            c = c.replace(val[4][0],'')
-            c = c.replace(val[4][1],'')
-            c = c.replace(val[4][2],'')
-            c = c.replace(val[4][3],'')
+
+            for c in val[4]:
+                c = c.replace(c,'')
 
             if len(c) != 1:
                 continue
@@ -84,8 +78,6 @@ for idx, inp in enumerate(inputs) :
             segment[6] = c[0]
             break 
     
-    # inp.remove(val[9])
-
     #find segment 4
     # 8-9
     tmp = val[8]
@@ -112,7 +104,6 @@ for idx, inp in enumerate(inputs) :
                 segment[1] = tmp[0]
                 val[3] = c
                 
-    # 1,3,4,5,7,8,9 - 0,2,6
     # find segment 3
     # 3 -1 seg[0] seg[6]
     tmp = val[3]
